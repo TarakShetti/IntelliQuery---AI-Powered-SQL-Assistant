@@ -26,7 +26,7 @@ def create_db(df):
     return conn
 
 # ---------------------------
-# SMART JSON FLATTENER 🔥
+# JSON FLATTENER
 # ---------------------------
 def flatten_json(data):
     if isinstance(data, dict):
@@ -130,7 +130,6 @@ Sample Rows:
     if user_question:
         with st.spinner("Generating SQL query..."):
 
-            # 🔥 Improved prompt
             prompt = f"""
 You are a strict SQLite SQL generator.
 
@@ -172,7 +171,7 @@ SQL:
                 else:
                     sql_query = ""
 
-                # 🔥 VALIDATION FIX
+                # VALIDATION
                 if (
                     not sql_query.lower().startswith("select")
                     or len(sql_query.split()) < 4
@@ -192,7 +191,7 @@ SQL:
                 st.dataframe(result)
 
                 # ---------------------------
-                # 🔥 HUMAN-LIKE RESPONSE
+                # RESPONSE
                 # ---------------------------
                 with st.spinner("Generating human-friendly answer..."):
                     answer_prompt = f"""
