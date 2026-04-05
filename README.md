@@ -1,4 +1,4 @@
-# 📊 IntelliQuery - AI Powered SQL Assistant
+# 📊 IntelliQuery - An SQL Tool For Busy Business Analysts
 
 ## 📌 Description
 IntelliQuery is a Streamlit-based application that allows users to upload datasets and query them using natural language. The system automatically converts user queries into SQL using AI and displays results.
